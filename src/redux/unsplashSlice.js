@@ -16,7 +16,7 @@ const unsplashSlice = createSlice({
         state.error = null;
       })
       .addCase(getUnsplashPhotos.fulfilled, (state, action) => {
-        state.gallery = action.payload;
+        state.gallery = action.payload.data;
         state.isLoading = false;
         state.error = null;
       })
