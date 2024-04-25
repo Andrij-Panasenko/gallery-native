@@ -1,12 +1,16 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 
 const GalleryItem = ({ data }) => {
+    const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <Image
-        source={{ uri: data.urls.small }}
-        style={styles.image}
-      />
+      <TouchableOpacity onPress={() => navigation.navigate("Full image", {image: data.urls.full})}>
+        <Image source={{ uri: data.urls.small }} style={styles.image} />
+      </TouchableOpacity>
+
       <Text style={styles.author}>{data.user.name}</Text>
     </View>
   );

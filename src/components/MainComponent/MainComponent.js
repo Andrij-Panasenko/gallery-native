@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { View } from "react-native";
 import { useDispatch } from "react-redux";
 import { getUnsplashPhotos } from "../../redux/operations";
-import GalleryList from "../galleryList/galleryList";
+import GalleryList from "../GalleryList/GalleryList";
 
 const MainComponent = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getUnsplashPhotos);
+    dispatch(getUnsplashPhotos());
   }, [dispatch]);
 
   return (

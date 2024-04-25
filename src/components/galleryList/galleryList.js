@@ -5,6 +5,7 @@ import GalleryItem from "../GalleryItem/GalleryItem";
 
 const GalleryList = () => {
   const gallery = useSelector(selectGallery);
+
   return (
     <SafeAreaView>
       <ScrollView>
