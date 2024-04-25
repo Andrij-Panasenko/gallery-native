@@ -1,1 +1,1 @@
-export const selectGallery = (store) => store.gallery.gallery;
+export const selectGallery = (state) => state.gallery.gallery;
