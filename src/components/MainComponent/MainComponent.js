@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { useDispatch } from "react-redux";
 
-export const MainComponent = () => {
+const MainComponent = () => {
     const dispatch = useDispatch();
     useEffect(() => {
 
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
+export default MainComponent;
