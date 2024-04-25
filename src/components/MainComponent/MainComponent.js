@@ -1,8 +1,8 @@
-import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { useDispatch, useSelector } from "react-redux";
+import { View } from "react-native";
+import { useDispatch } from "react-redux";
 import { getUnsplashPhotos } from "../../redux/operations";
+import GalleryList from "../galleryList/galleryList";
 
 const MainComponent = () => {
   const dispatch = useDispatch();
@@ -12,20 +12,10 @@ const MainComponent = () => {
   }, [dispatch]);
 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <GalleryList />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default MainComponent;
